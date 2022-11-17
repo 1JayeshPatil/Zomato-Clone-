@@ -11,18 +11,18 @@ import NightLife from "../components/NightLife";
 import Nutrition from "../components/Nutrition";
 
 const Home = () => {
-    const { type } = useParams();
+  const { type } = useParams();
 
-    return (
-        <>
-            <div className="my-5">
-                {type === "delivery" && <Delivery />}
-                {type === "dining" && <Dining />}
-                {type === "night" && <NightLife />}
-                {type === "nutri" && <Nutrition />}
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="my-5 mb-20 md:mb-10">
+        {type === "delivery" && <Delivery />}
+        {type === "dining" && <Dining />}
+        {type === "night" && <NightLife />}
+        {type === "nutri" && <Nutrition />}
+      </div>
+    </>
+  );
 };
 
 export default HomeLayout(Home);
