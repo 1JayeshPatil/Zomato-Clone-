@@ -21,11 +21,11 @@ const RestaurantLayout = ({ children: Component, ...props }) => {
       },
       {
         location:
-          "https://b.zmtcdn.com/data/pictures/chains/7/6508047/07c44b214ca5d12777712f288485abc1.jpg",
+          "https://b.zmtcdn.com/data/pictures/chains/7/6508047/0690264599d8796c08291796ab2b3e54.jpg",
       },
       {
         location:
-          "https://b.zmtcdn.com/data/pictures/chains/7/6508047/0690264599d8796c08291796ab2b3e54.jpg",
+          "https://b.zmtcdn.com/data/pictures/chains/7/6508047/07c44b214ca5d12777712f288485abc1.jpg",
       },
       {
         location:
@@ -37,7 +37,7 @@ const RestaurantLayout = ({ children: Component, ...props }) => {
       },
     ],
     name: "Madéline",
-    cuisine: ["Biryani", "Kebab", "Desserts", "Malwani","Mangalorean" ],
+    cuisine: ["Biryani", "Kebab", "Desserts", "Sichuan", "North Indian"],
     address: "Kharadi, Pune",
     restaurantRating: 4.6,
     deliveryRating: 4.1,
@@ -64,7 +64,7 @@ const RestaurantLayout = ({ children: Component, ...props }) => {
             <RiShareForwardLine /> Share
           </InfoButton>
         </div>
-        <div className="my-10">
+        <div className="my-10 sticky bg-white top-0 pt-2 z-10">
           <Tabs />
         </div>
         {Component}
