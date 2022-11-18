@@ -1,7 +1,6 @@
 import React from "react";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 import ReactStars from "react-rating-stars-component";
-import ReactStart from "react-rating-stars-component";
 
 const NutritionCard = (props) => {
     return (
@@ -38,7 +37,7 @@ const NutritionCard = (props) => {
                         <span className="text-gray-400">15</span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-400">
-                        Protein - Muscle Gain
+                        Burn - Weight Balance
                     </h3>
                     <p className="text-sm font-light text-gray-600">
                         This is a description of the product. You can add what ever you want
@@ -49,15 +48,13 @@ const NutritionCard = (props) => {
                     <div>
                         <span className="flex gap-2 items-center">
                             <s className="text-gray-400 font-light">₹600</s>
-                            <strong>₹400</strong>
+                            <strong>₹320</strong>
                         </span>
                         <p className="text-gray-400 font-light">Month Pack - 30 Capsules</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        
     );
 };
 
