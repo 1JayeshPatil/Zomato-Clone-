@@ -32,12 +32,25 @@ const Overview = () => {
         averageCost: "450",
     });
     const [menuImages, setMenuImages] = useState([
-        "https://b.zmtcdn.com/data/menus/571/10571/497e661a96400b5d206be0cb58a6b75b.jpg",
-        "https://b.zmtcdn.com/data/menus/571/10571/d2d0c839c9e915e1a8374cd86be68bad.jpg",
-        "https://b.zmtcdn.com/data/menus/571/10571/684901d325280c3460d61f8efb095172.jpg",
+        "https://b.zmtcdn.com/data/menus/931/931/d40e86a957d1ed6e6fabe5a67a161904.jpg",
+        "https://b.zmtcdn.com/data/menus/931/931/36f8a3b9e5dbf6435f903c9a8745bcc8.jpg",
+        "https://b.zmtcdn.com/data/menus/931/931/8d6623791860b054953b6c2c14d61bcb.jpg",
         "https://b.zmtcdn.com/data/menus/931/931/6d462a04051c0eabb0067149aa84cc64.jpg",
     ]);
-    const [reviews, setReviews] = useState([]);
+    const [reviews, setReviews] = useState([
+        {
+            rating: 3.5,
+            isRestaurantReview: false,
+            createdAt: "Fri Oct 14 2022 20:20:34 GMT+0530 (India Standard Time)",
+            reviewText: "Very bad experience.",
+        },
+        {
+            rating: 4.5,
+            isRestaurantReview: false,
+            createdAt: "Fri Oct 14 2022 20:19:34 GMT+0530 (India Standard Time)",
+            reviewText: "Very good experience.",
+        },
+    ]);
     const { id } = useParams;
 
     const slideConfig = {
@@ -114,15 +127,13 @@ const Overview = () => {
 
                 <div className="flex flex-col-reverse">
                     <div className="my-4">
-                        <h4 className="text-lg font-medium">
-                            Rate your delivery experience
-                        </h4>
-                        <ReactStars
-                            count={5}
-                            onChange={(newRating) => console.log(newRating)}
-                            size={24}
-                            activeColor="#ffd700"
-                        />
+                        <h4 className="text-lg font-medium">{restaurant.name} Reviews</h4>
+                        {/* <ReactStars
+              count={5}
+              onChange={(newRating) => console.log(newRating)}
+              size={24}
+              activeColor="#ffd700"
+            /> */}
                         {reviews.map((review, index) => (
                             <ReviewCard {...review} key={index} />
                         ))}
@@ -132,12 +143,6 @@ const Overview = () => {
                         <h4 className="text-lg font-medium">Similar Restaurants</h4>
                         <div>
                             <Swiper {...slideConfig}>
-                                <SwiperSlide>
-                                    <MenuSimilarRestaurantCard
-                                        image="https://b.zmtcdn.com/data/pictures/chains/7/11677/beefd8733266cf879182977c5ac7fa23.jpg"
-                                        title="Faasos - Wraps & Rolls"
-                                    />
-                                </SwiperSlide>
                                 <SwiperSlide>
                                     <MenuSimilarRestaurantCard
                                         image="https://b.zmtcdn.com/data/pictures/chains/3/307893/f606e2cc225f298f77b0bf9673e96dbe_featured_v2.jpg"
@@ -152,11 +157,10 @@ const Overview = () => {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <MenuSimilarRestaurantCard
-                                        image="https://b.zmtcdn.com/data/dish_photos/f81/8bb330441f4d3fffaf89f44457fdff81.jpg"
-                                        title="Merwans Cake Stop"
+                                        image="https://b.zmtcdn.com/data/pictures/chains/4/844/c2aff8d94b55d820df98053ce1b8d9cb_featured_v2.jpg"
+                                        title="Khan Chacha"
                                     />
                                 </SwiperSlide>
-
                             </Swiper>
                         </div>
                     </div>
@@ -173,12 +177,13 @@ const Overview = () => {
             </div>
             <aside
                 style={{ height: "fit-content" }}
-                className="hidden md:flex md:w-4/12 sticky rounded-xl top-20 bg-white p-3 shadow-md flex-col gap-4"
+                className="hidden md:flex md:w-4/12 sticky rounded-xl top-20 bg-white py-4 px-4 shadow-md flex-col gap-4"
             >
                 <MapView
                     title="McDonald's"
                     phno="+193423542345"
                     mapLocation={getLatLong("28.64121406271755, 77.21955482132051")}
+                    latAndLong={"28.64121406271755, 77.21955482132051"}
                     address="H-5/6, Plaza Building, Connaught Place, New Delhi"
                 />
             </aside>
