@@ -102,6 +102,6 @@ export default RestaurantLayout;
 // ],
 // name: "Biryani Blues",
 // cuisine: ["Biryani", "Kebab", "Desserts"],
-// address: "Connaught Place, New Delhi",
+// address: "Connaught Place,Pune",
 // restaurantRating: 4.1,
 // deliveryRating: 3.2,
