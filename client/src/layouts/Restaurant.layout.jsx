@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 // components
 import Navbar from "../components/Navbar";
 import ImageGrid from "../components/Restaurant/ImageGrid";
-import InfoButton from "../components/Restaurant/InfoButton";
+import InfoButton from "../comphttps://github.com/1JayeshPatil/Zomato-Clone-/pull/24/conflict?name=client%252Fsrc%252Fcomponents%252FRestaurant%252FOverview.jsx&ancestor_oid=8a4ca5046a237c17db6cdaf0419efc0698a582f9&base_oid=b5bb34c5f34fbb779589f3272444bda083751a4a&head_oid=63600287341d79c73b148429b70a2bceb08de324onents/Restaurant/InfoButton";
 import RestaurantInfo from "../components/Restaurant/RestaurantInfo";
 import Tabs from "../components/Restaurant/Tabs";
 import CartContainer from "../components/Cart/CartContainer";
