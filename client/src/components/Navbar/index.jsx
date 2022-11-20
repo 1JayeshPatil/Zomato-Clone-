@@ -209,7 +209,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // const user = {
-  //   // fullName: "Aditya",
+  //   // fullName: "Jayesh",
   // };
 
   const user = useSelector((globalState) => globalState.user);
